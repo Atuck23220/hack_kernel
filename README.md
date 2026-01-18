@@ -68,22 +68,22 @@ Each syscall was added to:
 
 Kernel rebuilt cleanly and boots as: aarontuck_v2
 ---------------------------------
-Toolkit Structure (Linux)
+**Toolkit Structure (Linux)**
 
-hackKernel
- syscall-export              # Exported kernel syscall source files
+```text
+hackKernel/
+├── syscall-export/                # Exported kernel syscall source files
+│   ├── sys_aaron_tuck.c
+│   ├── sys_track_process.c
+│   ├── sys_get_children_pids.c
+│   ├── sys_user_session_info.c
+├── syscall-tests/                 # User-space syscall test programs
+│   ├── track_test.c
+│   ├── children_test.c
+│   ├── user_session_test.c
+└── include/linux/track_info.h     # Shared struct definitions
+```
 
- sys_aaron_tuck.c
-   sys_track_process.c
-   sys_get_children_pids.c
-   sys_user_session_info.c
-
- syscall-tests                # User-space syscall test programs
-   track_test.c
-   children_test.c
-   user_session_test.c
-
- include/linux/track_info.h     # Shared struct definitions
 
 ---------------------------------
 Build Instructions (Linux)
